@@ -1,23 +1,25 @@
 %-------------------------------------------------------------------------%
 % cycle_2_init_contrast(0.6)
 
-beta_arr = 1e-3 : 1e-3 : 1;
-length = size(beta_arr);
+% beta_arr = 1e-3 : 1e-3 : 1;
+% length = size(beta_arr);
+% 
+% init_contrast_arr = zeros(length(2), 1);
+% for i = 1 : length(2)
+%     init_contrast_arr(i, 1) = cycle_2_init_contrast(beta_arr(i));
+% end
+% 
+% plot(beta_arr, init_contrast_arr, 'LineWidth', 2)
+% xlabel('\beta');
+% ylabel('init contrast');
+% 
+% max_contrast = max(init_contrast_arr);
+% 
+% save('init_contrast_data.mat');
 
-init_contrast_arr = zeros(length(2), 1);
-for i = 1 : length(2)
-    init_contrast_arr(i, 1) = cycle_2_init_contrast(beta_arr(i));
-end
+calc_init_contrast(0.3)
 
-plot(beta_arr, init_contrast_arr, 'LineWidth', 2)
-xlabel('\beta');
-ylabel('init contrast');
-
-max_contrast = max(init_contrast_arr);
-
-save('init_contrast_data.mat');
-
-function contrast = cycle_2_init_contrast(beta_in)
+function contrast = calc_init_contrast(beta_in)
     %----------------------------------------------------------------------
     % Parameters and equations
     K0 = zeros(7,7);
