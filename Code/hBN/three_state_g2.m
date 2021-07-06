@@ -3,7 +3,7 @@ function y = three_state_g2(x, k_21, k_23, k_31)
     % transition rates
 %     y = zeros(size(x));
     K0 = zeros(3,3);
-    beta = 0.05;
+    beta = 0.3;
     k_12 = beta * k_21;
     K0(1,2) = k_12;
     K0(2,1) = k_21;
